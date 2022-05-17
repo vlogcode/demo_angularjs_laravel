@@ -13,14 +13,14 @@ class InformationMigration extends Migration
      */
     public function up()
     {
-        Schema::create('information_user', function (Blueprint $table) {
-            $table->id('id_informationUser');
-            $table->string('name_informationUser');
-            $table->string('email_informationUser')->unique();
-            $table->string('password_informationUser');
-            $table->string('address_informationUser');
-            $table->timestamps();
-        });
+        // Schema::create('information_user', function (Blueprint $table) {
+        //     $table->id('id_informationUser');
+        //     $table->string('name_informationUser');
+        //     $table->string('email_informationUser')->unique();
+        //     $table->string('password_informationUser');
+        //     $table->string('address_informationUser');
+        //     $table->timestamps();
+        // });
     }
 
     /**

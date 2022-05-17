@@ -6,11 +6,12 @@
                 <div class="panel">
                     <div class="panel-body">
                         <div class="panel-heading">
-                            <a href="{{ route('user.index') }}" class="btn btn-primary float-end">Quay lại danh sách</a>
+                            <a href="" class="btn btn-primary float-end">Quay lại danh sách</a>
                         </div>
                         <div class="">
                             <div class="card-body">
-                                <form action="{{ route('user.update', $data->id) }}" method="POST"
+                                {{-- <form action="{{ route('user.update', $data->id) }}" method="POST" --}}
+                                  <form action="" method="POST"
                                     style="display: flex;justify-content: center;flex-direction: column">
                                     {{ csrf_field() }}
                                     @csrf

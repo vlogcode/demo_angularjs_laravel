@@ -23,11 +23,26 @@
                     </div>
                     <ul id="mainnav-menu" class="list-group">
                         <li class="active-sub">
-                            {{-- <a href="{{route('user.index')}}">
+                            <a href="">
                                 <i class="demo-pli-home"></i>
                                 <span class="menu-title">Danh sách tài khoản</span>
-                            </a> --}}
+                            </a>
+                        </li>
+                        <li class="active-sub">
+                            <a href="#" aria-expanded="false">
+                                <i class="demo-pli-warning-window"></i>
+                                <span class="menu-title">Chức vụ</span>
+                                <i class="arrow"></i>
+                            </a>
 
+                            <!--Submenu-->
+                            <ul class="collapse" aria-expanded="false" style="height: 0px;">
+                                <li class="active-link"><a href="grid-bootstrap.html">Bootstrap Grid</a></li>
+                                <li><a href="grid-liquid-fixed.html">Liquid Fixed</a></li>
+                                <li><a href="grid-match-height.html">Match Height</a></li>
+                                <li><a href="grid-masonry.html">Masonry</a></li>
+
+                            </ul>
                         </li>
 
                     </ul>

@@ -6,11 +6,11 @@
             <div class="panel">
                 <div class="panel-body">
                     <div class="panel-heading">
-                        <a href="{{route('user.index')}}" class="btn btn-primary float-end">quay lại danh sách</a>
+                        <a href="" class="btn btn-primary float-end">quay lại danh sách</a>
                     </div>
                     <div class="">
                         <div class="card-body">
-                            <form action="{{route('user.store')}}" method="POST">
+                            <form action="" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-6">

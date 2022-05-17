@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Danh sách người dùng</title>
     @include('client.css')
-    @include('client.angular')
+
 </head>
 
 <body ng-controller="myController" >
@@ -19,7 +19,7 @@
                 <div id="page-head">
                     <div class="pad-all text-center">
                         <h3>Quản lý</h3>
-                        {{-- <h3>@{{ title }}</h3> --}}
+                        <h3>@{{ title }}</h3>
 
                     </div>
                 </div>
@@ -32,7 +32,7 @@
         </button>
     </div>
     @include('client.js')
-    @include('client.angular')
+
 
 </body>
 

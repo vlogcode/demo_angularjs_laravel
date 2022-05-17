@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\Api\apiuser;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,18 +31,15 @@ Route::middleware(['web', 'guest'])->group(function () {
     Route::post('/login', [loginController::class, 'doLogin'])->name('doLogin');
 });
 
-// Route::middleware(['web', 'auth'])->group(function () {
-//     Route::resource('/user', userController::class);
-//     Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
-//     Route::resource('/information', userController::class);
-//     Route::get('/account_information',[userController::class,'viewInformation']);
-// });
-
-
-Route::middleware(['web', 'auth'])->group( function () {
-    // Route::get('/user', [userController::class, 'thongke']);
-    Route::get('/user', [userController::class, 'index'])->name('thongke');
-
+Route::middleware(['web', 'auth'])->group(function () {
+    Route::resource('/user', userController::class);
     Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
+    // Route::resource('/information', userController::class);
+    // Route::get('/account_information',[userController::class,'viewInformation']);
+
+    Route::get('/user',[userController::class,'index']);
+
+
 });
+
 
