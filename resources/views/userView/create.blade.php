@@ -6,14 +6,14 @@
             <div class="panel">
                 <div class="panel-body">
                     <div class="panel-heading">
-                        <a href="" class="btn btn-primary float-end">quay lại danh sách</a>
+                        <a href="{{ route('user.index') }}" class="btn btn-primary float-end">quay lại danh sách</a>
                     </div>
                     <div class="">
                         <div class="card-body">
                             <form action="" method="POST">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-8">
                                         <div class="form-group">
                                             <strong>Name:</strong>
                                             <input type="text" name="name" class="form-control" placeholder="name">
@@ -28,7 +28,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-success mt-2">luu</button>
+                                <button type="submit" class="btn btn-success mt-2" ng-click="saveData()">luu</button>
                             </form>
                         </div>
                     </div>

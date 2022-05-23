@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Users;
+use Illuminate\Support\Facades\Hash;
 class apiuser extends Controller
 {
     /**
@@ -34,7 +36,14 @@ class apiuser extends Controller
      */
     public function store(Request $request)
     {
-       return Users::create($request->all());
+    //    return Users::create($request->all());
+
+
+    $data = $request->all();
+    $data['password'] = Hash::make($data['password']);
+    return Users::create($data);
+
+
     }
 
     /**

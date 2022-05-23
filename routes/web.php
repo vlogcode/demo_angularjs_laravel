@@ -37,8 +37,9 @@ Route::middleware(['web', 'auth'])->group(function () {
     // Route::resource('/information', userController::class);
     // Route::get('/account_information',[userController::class,'viewInformation']);
 
-    Route::get('/user',[userController::class,'index']);
+    // Route::get('user',[userController::class,'index']);
 
+    Route::resource('listdanhsach', apiuser::class);
 
 });
 

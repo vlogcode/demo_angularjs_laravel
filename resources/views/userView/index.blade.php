@@ -11,12 +11,12 @@
                         <div class="pad-btm form-inline">
                             <div class="row">
                                 <div class="col-sm-6 table-toolbar-left">
-                                    {{-- <a href="{{ route('user.create') }}"> --}}
-                                    {{-- <button class="btn btn-purple" ng-click="showmodal(0)" id="show-tt" data-target="#demo-default-modal" data-toggle="modal"><i
-                                                class="demo-pli-add icon-fw" ></i>Thêm</button> --}}
-                                    {{-- </a> --}}
+                                    {{-- <a href="{{ route('user.create') }}">
+                                     <button class="btn btn-purple" ><i
+                                                class="demo-pli-add icon-fw" ></i>Thêm</button>
+                                     </a> --}}
                                     <button class="btn btn-purple" data-target="#demo-default-modal"
-                                                data-toggle="modal"   ng-click="showmodals(0)">Thêm</button>
+                                                data-toggle="modal"   ng-click="showmodal(0)">Thêm</button>
                                 </div>
                                 <div class="col-sm-6 table-toolbar-right">
                                     <div class="form-group">
@@ -27,11 +27,11 @@
                             </div>
                         </div>
                         <div class="table-responsive">
-                            @if (Session::has('thongbao'))
+                            {{-- @if (Session::has('thongbao'))
                                 <div class="alert alert-success">
                                     {{ Session::get('thongbao') }}
                                 </div>
-                            @endif
+                            @endif --}}
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
@@ -42,7 +42,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr dir-paginate="sp in danhsach_thongke | filter:searchs | itemsPerPage:1">
+                                    <tr dir-paginate="sp in users | filter:searchs | itemsPerPage:10">
                                         <td>@{{ $index + 1 }}</td>
                                         <td>@{{ sp.name }}</td>
                                         <td>@{{ sp.email }}</td>
@@ -51,8 +51,6 @@
                                                 data-toggle="modal" ng-click="showmodal(sp.id)">sửa</button>
                                             <button class="btn btn-danger" ng-click="deleteClick(sp.id)">xóa</button>
                                             <button class="btn btn-primary">ủy quyền</button>
-
-
                                         </td>
                                     </tr>
                                 </tbody>
@@ -87,22 +85,22 @@
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Username :</strong>
-                                <input type="text" name="username" value="" class="form-control"
-                                    placeholder="Mời bạn nhập tài khoản" ng-model="danhsach_thongkes.name">
+                                <input type="text" name="name" value="" class="form-control"
+                                    placeholder="Mời bạn nhập tài khoản" ng-model="user.name">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>email :</strong>
                                 <input type="email" name="email" value="" class="form-control"
-                                    placeholder="Mời bạn nhập email" ng-model="danhsach_thongkes.email">
+                                    placeholder="Mời bạn nhập email" ng-model="user.email">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>password :</strong>
                                 <input type="text" name="password" value="" class="form-control"
-                                    placeholder="Mời bạn nhập mật khẩu" ng-model="danhsach_thongkes.password">
+                                    placeholder="Mời bạn nhập mật khẩu" ng-model="user.password">
                             </div>
                         </div>
 
